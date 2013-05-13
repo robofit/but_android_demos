@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ROS Mover</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="g_sen">Hello</string>
+    <string name="settings_title">Settings</string>
+    <string name="diag_title">Diagnostic</string>
+    <string name="preference_title">Settings topics</string>
+    <string name="menu_follow">Follow person</string>
+
+</resources>
