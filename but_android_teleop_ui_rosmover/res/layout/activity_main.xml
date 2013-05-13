@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/carbon" 
+		android:contentDescription="Pozadi"/>
+
+    <org.ros.android.view.RosImageView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+         />
+
+    <GridLayout
+        android:id="@+id/layer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnCount="4"
+        android:orientation="horizontal" >
+        
+        
+        <org.ros.android.view.visualization.VisualizationView
+	        android:id="@+id/visualization"
+	        android:layout_width="340dp"
+            android:layout_height="240dp"
+        	android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0"/>
+		<!--  
+        <org.ros.android.renderer.VisualizationView
+            android:id="@+id/visualization"
+            android:layout_width="337dp"
+            android:layout_height="240dp"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0" />
+
+        <org.ros.android.renderer.AngleControlView
+            android:id="@+id/acAngleControl"
+            android:layout_width="337dp"
+            android:layout_height="240dp"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0"
+            android:clickable="true"
+            android:visibility="invisible" />
+
+        <org.ros.android.renderer.TranslationControlView
+            android:id="@+id/tcTranslationControl"
+            android:layout_width="337dp"
+            android:layout_height="240dp"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0"
+            android:clickable="true"
+            android:visibility="invisible" />
+
+        <org.ros.android.renderer.Translation2DControlView
+            android:id="@+id/tcTranslationControl2D"
+            android:layout_width="337dp"
+            android:layout_height="240dp"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0"
+            android:clickable="true"
+            android:visibility="invisible" />
+		-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0"
+            android:padding="3dip" >
+
+            <ToggleButton
+                android:id="@+id/show_me_toggle_button"
+                style="@style/ButtonFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:onClick="onShowMeToggleButtonClicked"
+                android:textOff="Center Me"
+                android:textOn="Center Me" />
+            <ToggleButton
+                android:id="@+id/resize_me_toggle_button"
+                style="@style/ButtonFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:onClick="onResizeMeToggleButtonClicked"
+                android:textOff="Max Map"
+                android:textOn="Min Map" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/button1"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:layout_gravity="left|bottom"
+            android:contentDescription="@string/settings_title"
+            android:onClick="SettingClick"
+            android:src="@drawable/setting" />
+
+        <ImageButton
+            android:id="@+id/button2"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="60dp"
+            android:layout_height="59dp"
+            android:layout_gravity="right|bottom"
+            android:contentDescription="@string/settings_title"
+            android:onClick="DiagClick"
+            android:layout_marginTop="-60dp"
+            android:src="@drawable/info" />
+    </LinearLayout>
+
+</RelativeLayout>

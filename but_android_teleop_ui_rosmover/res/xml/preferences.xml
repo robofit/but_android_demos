@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:title="@string/preference_title">
+   	<PreferenceCategory
+   		android:summary="Basic topics"
+   		android:title="Name of topics" >
+  		<EditTextPreference
+     		android:key="map"
+	     	android:summary="Please enter your topic for a map"
+	     	android:title="Map"
+	     	android:defaultValue="/map" />
+  		<EditTextPreference
+     		android:key="scan"
+	     	android:summary="Please enter your topic for a scan"
+	     	android:title="Laser-scan"
+	     	android:defaultValue="/scan" />
+	  	<EditTextPreference
+	     	android:key="camera"
+	     	android:summary="Please enter your topic for a robot's camera"
+	     	android:title="Camera - compressed"
+	     	android:defaultValue="/cam3d/rgb/image_color_flipped/compressed" />
+	  	<EditTextPreference
+	     	android:key="cmdvel"
+	     	android:summary="Please enter your topic for a basic movement"
+	     	android:title="Movement (cmd_vel)"
+	     	android:defaultValue="/cmd_vel_safe" />
+	  	<EditTextPreference
+	     	android:key="goal"
+	     	android:summary="Please enter your topic for set a goal"
+	     	android:title="Simple goal"
+	     	android:defaultValue="/move_base_simple/goal" />
+	</PreferenceCategory>
+	<PreferenceCategory
+   		android:summary="Flip depth data"
+   		android:title="Compute goal in flipped mode" >
+	   	<CheckBoxPreference
+	            android:title="Flip depth"
+	            android:defaultValue="true"
+	            android:summary="True of False"
+	            android:key="flipped_data" />
+	</PreferenceCategory>   	
+ 	<PreferenceCategory
+   		android:summary="Settings remote control of robot"
+   		android:title="Control type" >
+  		<ListPreference
+     		android:entries="@array/listOptions"
+     		android:entryValues="@array/listValues"
+     		android:key="control"
+     		android:summary="Please choose a control"
+     		android:title="Control"
+     		android:defaultValue="Street-view" />
+	</PreferenceCategory>
+</PreferenceScreen>
