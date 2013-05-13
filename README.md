@@ -1,4 +1,4 @@
-but_android
-===========
+but_android_demos
+=================
 
-Remote user interfaces developed by Robo@FIT for robot teleoperation for Android devices.
+Demos and Android applications developed by students within Robo@FIT group.
